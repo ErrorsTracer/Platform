@@ -12,12 +12,16 @@ RUN bun install
 
 RUN bun run build
 
+
 # Copy the rest of the application source code
 COPY . .
+
 
 # Expose the port your app runs on (e.g., 3000)
 EXPOSE 3000/tcp
 
+
+
 # Command to run your application using Bun
 # Replace "index.ts" with your application's entry file or a script name from package.json
-CMD ["bun", "run", "start"]
+CMD ["bun", ".next/standalone/server.js"]
