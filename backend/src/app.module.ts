@@ -1,3 +1,4 @@
+import { RefreshTokens } from './database/models/refresh-tokens.model';
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 
@@ -39,6 +40,7 @@ import { ApplicationsModule } from './modules/applications/applications.module';
         Plans,
         Subscriptions,
         Errors,
+        RefreshTokens,
       ],
       logging: false,
       autoLoadModels: true,

@@ -7,13 +7,13 @@ import {
 import { randomBytes } from 'crypto';
 import { JwtService } from '@nestjs/jwt';
 import { InjectModel } from '@nestjs/sequelize';
-import { Users } from 'src/database/models/users.model';
-import { Organizations } from 'src/database/models/organizations.model';
-import { OrganizationMembership } from 'src/database/models/organization-membership.model';
-import { Credentials } from 'src/database/models/credentials.model';
-import { ApplicationMembership } from 'src/database/models/application-membership.model';
-import { Errors } from 'src/database/models/errors.model';
-import { Applications } from 'src/database/models/applications.model';
+import { Users } from '../../database/models/users.model';
+import { Organizations } from '../../database/models/organizations.model';
+import { OrganizationMembership } from '../../database/models/organization-membership.model';
+import { Credentials } from '../../database/models/credentials.model';
+import { ApplicationMembership } from '../../database/models/application-membership.model';
+import { Errors } from '../../database/models/errors.model';
+import { Applications } from '../../database/models/applications.model';
 
 @Injectable()
 export class OrganizationsService {

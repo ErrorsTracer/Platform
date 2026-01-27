@@ -2,10 +2,10 @@ import { Module } from '@nestjs/common';
 import { RegistryController } from './registry.controller';
 import { RegistryService } from './registry.service';
 import { SequelizeModule } from '@nestjs/sequelize';
-import { Errors } from 'src/database/models/errors.model';
-import { Credentials } from 'src/database/models/credentials.model';
-import { Organizations } from 'src/database/models/organizations.model';
-import { Applications } from 'src/database/models/applications.model';
+import { Errors } from '../../database/models/errors.model';
+import { Credentials } from '../../database/models/credentials.model';
+import { Organizations } from '../../database/models/organizations.model';
+import { Applications } from '../../database/models/applications.model';
 
 @Module({
   imports: [

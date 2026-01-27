@@ -13,14 +13,12 @@ fi
 case "$INPUT" in
   backend)
     echo "Building backend..."
-    cp -r ./backend-src/* ./backend/
     cd backend
     docker build -t tracer-backend .
     ;;
   
   dashboard)
     echo "Building dashboard..."
-    cp -r ./dashboard-src/* ./dashboard/
     cd dashboard
     docker build -t tracer-dashboard .
     ;;

@@ -6,7 +6,7 @@ import { SequelizeModule } from '@nestjs/sequelize';
 import { ConfigModule } from '@nestjs/config';
 import { Users } from '../../database/models/users.model';
 import { AuthRepository } from './auth.repo';
-import { RefreshTokens } from 'src/database/models/refresh-tokens.model';
+import { RefreshTokens } from '../../database/models/refresh-tokens.model';
 
 @Module({
   imports: [

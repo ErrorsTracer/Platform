@@ -1,15 +1,15 @@
 import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/sequelize';
-import { ApplicationMembership } from 'src/database/models/application-membership.model';
-import { ApplicationTypes } from 'src/database/models/application-types.model';
-import { Applications } from 'src/database/models/applications.model';
-import { Credentials } from 'src/database/models/credentials.model';
-import { Errors } from 'src/database/models/errors.model';
-import { OrganizationMembership } from 'src/database/models/organization-membership.model';
-import { Organizations } from 'src/database/models/organizations.model';
-import { Users } from 'src/database/models/users.model';
-import { TransactionManager } from 'src/helpers/transaction.helper';
-import { generateCred } from 'src/utils/credentials';
+import { ApplicationMembership } from '../../database/models/application-membership.model';
+import { ApplicationTypes } from '../../database/models/application-types.model';
+import { Applications } from '../../database/models/applications.model';
+import { Credentials } from '../../database/models/credentials.model';
+import { Errors } from '../../database/models/errors.model';
+import { OrganizationMembership } from '../../database/models/organization-membership.model';
+import { Organizations } from '../../database/models/organizations.model';
+import { Users } from '../../database/models/users.model';
+import { TransactionManager } from '../../helpers/transaction.helper';
+import { generateCred } from '../../utils/credentials';
 
 type CreateAppData = {
   name: string;

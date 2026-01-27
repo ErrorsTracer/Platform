@@ -1,9 +1,9 @@
 import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/sequelize';
-import { Applications } from 'src/database/models/applications.model';
-import { Credentials } from 'src/database/models/credentials.model';
-import { Errors } from 'src/database/models/errors.model';
-import { Organizations } from 'src/database/models/organizations.model';
+import { Applications } from '../../database/models/applications.model';
+import { Credentials } from '../../database/models/credentials.model';
+import { Errors } from '../../database/models/errors.model';
+import { Organizations } from '../../database/models/organizations.model';
 
 @Injectable()
 export class RegistryService {

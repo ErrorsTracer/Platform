@@ -11,6 +11,7 @@ import cookieParser from 'cookie-parser';
 
 async function bootstrap() {
   // configure environment variables
+
   dotenv.config();
 
   // create the app

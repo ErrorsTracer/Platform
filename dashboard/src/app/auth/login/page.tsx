@@ -19,8 +19,7 @@ export default function SignIn() {
       const res = await login(data).unwrap();
 
       if (res.accessToken) {
-        // await setAuthCookie(res.accessToken);
-        localStorage.setItem("accessToken", res.accessToken);
+        await setAuthCookie(res.accessToken);
       }
     } catch (err) {
       console.log(err);

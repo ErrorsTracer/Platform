@@ -1,10 +1,8 @@
 import { Injectable } from '@nestjs/common';
 import { Users } from '../../database/models/users.model';
 import { InjectModel } from '@nestjs/sequelize';
-import { comparePassword, hashPassword } from '../../utils/bcrypt';
-import { JwtService } from '@nestjs/jwt';
-import { CreateAccountDto } from './auth.dto';
-import { RefreshTokens } from 'src/database/models/refresh-tokens.model';
+
+import { RefreshTokens } from '../../database/models/refresh-tokens.model';
 
 @Injectable()
 export class AuthRepository {
