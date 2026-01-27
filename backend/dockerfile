@@ -1,29 +1,27 @@
 
 # Build stage
-FROM node:20-alpine AS builder
+FROM oven/bun:1 AS builder
 
 WORKDIR /usr/src/app
 
 # Install Nest.js CLI globally
-RUN npm i -g @nestjs/cli
+RUN bun add -g @nestjs/cli
 
-COPY package*.json package-lock.json ./
-RUN npm install # Install both production and development dependencies
+COPY package*.json bun.lock ./
+RUN bun install # Install both production and development dependencies
 
 COPY . .
 
-RUN npm run build
-
+RUN bun run build
 # Production image
-FROM node:20-alpine
+FROM oven/bun:1
 
 WORKDIR /usr/src/app
 
 COPY --from=builder /usr/src/app/package*.json ./
-COPY --from=builder /usr/src/app/package-lock.json ./
+COPY --from=builder /usr/src/app/bun.lock ./
 COPY --from=builder /usr/src/app/dist ./dist
 
 # Prune development dependencies
-RUN npm install --production
-
-CMD ["node", "dist/main"]
+RUN bun install --production
+CMD ["bun", "dist/main"]
